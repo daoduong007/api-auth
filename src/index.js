@@ -11,7 +11,7 @@ dotenv.config();
 db.connect();
 
 const app = express();
-const port = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 const cors = require('cors');
 
 app.use(
@@ -31,4 +31,4 @@ app.use(function (req, res) {
   res.status(404).send({ url: req.originalUrl + ' not found' });
 });
 
-app.listen(3001 || port, () => {});
+app.listen(PORT, () => {});
