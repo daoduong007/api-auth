@@ -31,4 +31,4 @@ app.use(function (req, res) {
   res.status(404).send({ url: req.originalUrl + ' not found' });
 });
 
-app.listen(3001, () => {});
+app.listen(3001 || port, () => {});
