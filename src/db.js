@@ -8,7 +8,7 @@ const dbConnectionURL = {
 async function connect() {
   try {
     await mongoose.connect(dbConnectionURL.LOCALURL);
-    console.log('successful!!!');
+    console.log('successful!!');
   } catch (error) {
     console.log('false!!!');
   }
